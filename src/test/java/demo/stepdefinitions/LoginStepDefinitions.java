@@ -4,6 +4,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import demo.helper.LoginFailureMessage;
+import demo.helper.TestData;
 import demo.pages.LoginPage;
 import demo.questions.TheLoginErrorButton;
 import demo.tasks.Login;
@@ -34,6 +35,6 @@ public class LoginStepDefinitions {
 	@Then("{actor} is redirected to the inventory.")
 	public void actor_is_redirected(Actor actor) {
 		actor.attemptsTo(
-				Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://www.saucedemo.com/inventory.html"));
+				Ensure.thatTheCurrentPage().currentUrl().isEqualTo(TestData.INVENTORY_URL));
 	}
 }

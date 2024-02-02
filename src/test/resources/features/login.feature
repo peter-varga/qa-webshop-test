@@ -8,7 +8,7 @@ Feature: Login to the saucelab webshop
     Then John is redirected to the inventory.
       
   @regression
-  Scenario Outline: Login unsuccessfully as users with different roles
+  Scenario Outline: Login unsuccessfully
     Given John navigates to the loginpage
     When John logs in with username:"<username>",password:"<password>"
     Then John sees that the login process is unsuccessful with error type:"<errorType>".
